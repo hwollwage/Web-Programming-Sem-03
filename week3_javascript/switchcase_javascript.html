@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var answer = prompt("you're lucky! please choose your prize by entering number 1-5 : ");
+        var prize = "";
+
+        switch(answer) {
+            case "1":
+                prize = "tissue";
+            case "2":
+                prize = "hat";
+            case "3":
+                prize = "sticker";
+            case "4":
+                prize = "fried oil";
+            case "5":
+                prize = "money Rp 50.000";
+            default:
+                document.write("<p> oops, your choices wrong");
+        }
+
+        if(prize === "") {
+            document.write("<p> you failed to get the prize </p>");
+        } else {
+            document.write("<h2> congratulations you got "+ prize + "</h2>");
+        }
+    </script>
+</body>
+</html>

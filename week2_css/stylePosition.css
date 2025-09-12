@@ -1,0 +1,41 @@
+div.static {
+    position: static;
+    border: 3px solid green;
+}
+
+div.relative {
+    position: relative;
+    left: 30px;
+    border: 3px solid lightgreen;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid blue;
+}
+
+div.relative1 {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid lightblue;
+}
+
+div.absolute {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid darkgreen;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    border: 2px solid red;
+}
