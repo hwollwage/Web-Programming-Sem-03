@@ -1,0 +1,56 @@
+body {
+    background: linear-gradient(135deg, #cce3f0, #e8f6f3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.big-navbar {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    font-size: 1.25rem;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.brand-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navbar-nav .nav-link {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+.jumbotron {
+    background: linear-gradient(135deg, #c73fc3, #00bcd4);
+    color: rgb(255, 255, 255);
+    padding: 2rem 1rem;
+}
+.section-bg {
+    background-color: #fffefecc;
+}
+.circle-wrapper {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #30c337;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+.circle-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.desc-box {
+    max-width: 400px;
+    background-color: #e2e3e4;
+    border: 2px solid #007bff33;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.footer-bg {
+    background-color: #343a40;
+}
