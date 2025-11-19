@@ -1,0 +1,95 @@
+<?php 
+include('lib/Session.php');
+$session = new Session();
+
+if($session->get('is_login') !== true){
+    header('Location: login.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Blank Page</title>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
+
+  <!-- AdminLTE -->
+  <link rel="stylesheet" href="adminlte/dist/css/adminlte.min.css">
+
+  <!-- jQuery -->
+  <script src="adminlte/plugins/jquery/jquery.min.js"></script>
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <?php include('layouts/header.php');?>
+
+  <!-- Sidebar -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <a href="adminlte/index3.html" class="brand-link">
+        <img src="adminlte/dist/img/AdminLTELogo.png" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">AdminLTE 3</span>
+      </a>
+      <?php include('layouts/sidebar.php');?>
+  </aside>
+
+  <!-- Page Content -->
+  <div class="content-wrapper">
+    <?php
+        $page = isset($_GET['page']) ? strtolower($_GET['page']) : 'dashboard';
+        switch($page) {
+            case 'dashboard': include('pages/dashboard.php'); break;
+            case 'book':      include('pages/buku.php'); break;
+            case 'category':  include('pages/kategori.php'); break;
+            case 'userdashboard': include('pages/user.php'); break;
+            default: include('pages/dashboard.php'); break;
+        }
+    ?>
+  </div>
+
+  <?php include('layouts/footer.php');?>
+
+</div>
+
+<!-- Bootstrap -->
+<script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validation -->
+<script src="adminlte/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="adminlte/plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="adminlte/plugins/jquery-validation/localization/messages_id.min.js"></script>
+
+<!-- DataTables -->
+<script src="adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="adminlte/plugins/jszip/jszip.min.js"></script>
+<script src="adminlte/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="adminlte/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="adminlte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="adminlte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- AdminLTE -->
+<script src="adminlte/dist/js/adminlte.min.js"></script>
+
+</body>
+</html>
